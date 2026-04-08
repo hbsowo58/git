@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>간단한 포트폴리오</title>
+	<style>
+		:root {
+			--bg: #f4f7fc;
+			--card: #ffffff;
+			--primary: #2c6df0;
+			--text: #27303f;
+			--muted: #6b7385;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			font-family: "Noto Sans KR", "Segoe UI", sans-serif;
+			background: var(--bg);
+			color: var(--text);
+		}
+		.container {
+			width: min(1100px, calc(100% - 32px));
+			margin: 0 auto;
+			padding: 24px 0 48px;
+		}
+		head {
+			padding: 48px 0 32px;
+			text-align: center;
+		}
+		head h1 {
+			margin: 0;
+			font-size: clamp(2rem, 4vw, 3.5rem);
+		}
+		head p {
+			margin: 12px auto 0;
+			max-width: 720px;
+			color: var(--muted);
+			line-height: 1.7;
+		}
+		.profile-card {
+			background: var(--card);
+			padding: 32px;
+			border-radius: 24px;
+			box-shadow: 0 20px 50px rgba(39, 48, 63, 0.08);
+			margin-top: 32px;
+		}
+		.profile-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+		.section {
+			margin-top: 48px;
+		}
+		.section h2 {
+			font-size: 1.5rem;
+			margin-bottom: 18px;
+		}
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 18px;
+		}
+		.card {
+			background: var(--card);
+			padding: 22px;
+			border-radius: 18px;
+			border: 1px solid rgba(44, 109, 240, 0.1);
+		}
+		.card h3 {
+			margin-top: 0;
+			font-size: 1.1rem;
+		}
+		.card p {
+			margin: 10px 0 0;
+			color: var(--muted);
+			line-height: 1.65;
+		}
+		.skill-list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.skill-list li {
+			background: rgba(44, 109, 240, 0.1);
+			color: var(--primary);
+			padding: 10px 14px;
+			border-radius: 999px;
+			font-size: 0.95rem;
+		}
+		.contact-info {
+			display: grid;
+			gap: 10px;
+		}
+		.contact-info a {
+			color: var(--primary);
+			text-decoration: none;
+		}
+		.footer {
+			text-align: center;
+			margin-top: 48px;
+			color: var(--muted);
+			font-size: 0.95rem;
+		}
+		@media (max-width: 720px) {
+			.profile-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>홍길동 포트폴리오</h1>
+			<p>웹 개발자이자 크리에이터입니다. 사용자 중심의 인터랙티브 웹 경험과 깔끔한 디자인을 제공합니다.</p>
+		</header>
+
+		<section class="profile-card">
+			<div class="profile-grid">
+				<div>
+					<h2>소개</h2>
+					<p>안녕하세요! 저는 프론트엔드 개발과 UI/UX 디자인에 관심이 많은 개발자입니다. 반응형 웹, 간결한 인터페이스, 빠른 성능을 중요하게 생각합니다.</p>
+				</div>
+				<div>
+					<h2>핵심 역량</h2>
+					<ul class="skill-list">
+						<li>HTML/CSS</li>
+						<li>JavaScript</li>
+						<li>React</li>
+						<li>Responsive Design</li>
+						<li>Git</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>주요 프로젝트</h2>
+			<div class="cards">
+				<div class="card">
+					<h3>프로젝트 A</h3>
+					<p>반응형 웹 애플리케이션으로 사용자 맞춤형 대시보드를 구현했습니다. 데이터 시각화와 알림 기능을 포함합니다.</p>
+				</div>
+				<div class="card">
+					<h3>프로젝트 B</h3>
+					<p>모바일 퍼스트 디자인을 적용한 e커머스 랜딩 페이지를 개발했습니다. 접근성과 성능 최적화를 수행했습니다.</p>
+				</div>
+				<div class="card">
+					<h3>프로젝트 C</h3>
+					<p>팀 협업 도구를 위한 인터랙티브 UI를 제작했습니다. 깔끔한 상태 관리와 컴포넌트 재사용성을 중점으로 작업했습니다.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>연락하기</h2>
+			<div class="card contact-info">
+				<p>이메일: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+				<p>GitHub: <a href="https://github.com/yourname" target="_blank" rel="noreferrer">github.com/yourname</a></p>
+				<p>전화: <a href="tel:+821012345678">+82 10-1234-5678</a></p>
+			</div>
+		</section>
+
+		<p class="footer">간단한 포트폴리오 페이지입니다. 필요하시면 내용과 스타일을 추가로 맞춰드릴게요.</p>
+	</div>
+</body>
+</html>
